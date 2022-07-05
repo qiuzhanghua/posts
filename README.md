@@ -1,3 +1,5 @@
+# Nestjs + Prisma.io Sample
+
 ## Installation
 
 ```bash
@@ -32,6 +34,7 @@ pnpm test:cov
 ```
 
 My .env
+
 ```dotenv
 DATABASE_URL="postgresql://app:app@localhost:5432/app?schema=public"
 DATABASE_PROVIDER="postgresql"
