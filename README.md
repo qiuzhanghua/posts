@@ -4,7 +4,7 @@
 
 ```bash
 npm install
-npx prisma generate
+npx prisma db push
 ```
 
 ## Running the app
