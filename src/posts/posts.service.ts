@@ -6,6 +6,6 @@ export class PostsService {
   constructor(private readonly prism: PrismaService) {}
 
   async listAll() {
-    return this.prism.post.findMany()
+    return this.prism.post.findMany();
   }
 }
