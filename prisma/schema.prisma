@@ -4,6 +4,15 @@ generator client {
   provider = "prisma-client-js"
 }
 
+generator nestgraphql {
+    provider = "node node_modules/prisma-nestjs-graphql"
+    // for yarn monorepos
+    // provider = "prisma-nestjs-graphql"
+    output = "../src/@generated"
+    fields_Validator_from = "class-validator"
+    fields_Validator_input = true
+}
+
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
@@ -12,6 +21,8 @@ datasource db {
 model User {
   id    String     @default(uuid()) @id
   email String  @unique
+
+  /// @Validator.MinLength(3)
   name  String?
   posts Post[]
 
