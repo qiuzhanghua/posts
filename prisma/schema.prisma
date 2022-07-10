@@ -11,6 +11,7 @@ generator nestgraphql {
     output = "../src/@generated"
     fields_Validator_from = "class-validator"
     fields_Validator_input = true
+    schema = "schema.gql"
 }
 
 datasource db {

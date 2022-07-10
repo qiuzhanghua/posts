@@ -1,0 +1,75 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Mutation {
+  addUser(userCreateInput: UserCreateInput!): User!
+}
+
+type Post {
+  author: User
+  authorId: String
+  content: String
+  id: ID!
+  published: Boolean
+  title: String!
+}
+
+input PostCreateManyAuthorInput {
+  content: String
+  id: String
+  published: Boolean
+  title: String!
+}
+
+input PostCreateManyAuthorInputEnvelope {
+  data: [PostCreateManyAuthorInput!]!
+  skipDuplicates: Boolean
+}
+
+input PostCreateNestedManyWithoutAuthorInput {
+  connect: [PostWhereUniqueInput!]
+  connectOrCreate: [PostCreateOrConnectWithoutAuthorInput!]
+  create: [PostCreateWithoutAuthorInput!]
+  createMany: PostCreateManyAuthorInputEnvelope
+}
+
+input PostCreateOrConnectWithoutAuthorInput {
+  create: PostCreateWithoutAuthorInput!
+  where: PostWhereUniqueInput!
+}
+
+input PostCreateWithoutAuthorInput {
+  content: String
+  id: String
+  published: Boolean
+  title: String!
+}
+
+input PostWhereUniqueInput {
+  id: String
+}
+
+type Query {
+  posts: [Post!]!
+  users: [User!]!
+}
+
+type User {
+  _count: UserCount!
+  email: String!
+  id: ID!
+  name: String
+  posts: [Post!]
+}
+
+type UserCount {
+  posts: Int!
+}
+
+input UserCreateInput {
+  email: String!
+  id: String
+  name: String
+  posts: PostCreateNestedManyWithoutAuthorInput
+}

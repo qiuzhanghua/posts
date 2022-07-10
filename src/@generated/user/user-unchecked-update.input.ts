@@ -2,7 +2,7 @@ import { Field } from '@nestjs/graphql';
 import { InputType } from '@nestjs/graphql';
 import { StringFieldUpdateOperationsInput } from '../prisma/string-field-update-operations.input';
 import { NullableStringFieldUpdateOperationsInput } from '../prisma/nullable-string-field-update-operations.input';
-import { PostUncheckedUpdateManyWithoutAuthorNestedInput } from '../post/post-unchecked-update-many-without-author-nested.input';
+import { PostUncheckedUpdateManyWithoutAuthorInput } from '../post/post-unchecked-update-many-without-author.input';
 
 @InputType()
 export class UserUncheckedUpdateInput {
@@ -15,8 +15,6 @@ export class UserUncheckedUpdateInput {
   @Field(() => NullableStringFieldUpdateOperationsInput, { nullable: true })
   name?: NullableStringFieldUpdateOperationsInput;
 
-  @Field(() => PostUncheckedUpdateManyWithoutAuthorNestedInput, {
-    nullable: true,
-  })
-  posts?: PostUncheckedUpdateManyWithoutAuthorNestedInput;
+  @Field(() => PostUncheckedUpdateManyWithoutAuthorInput, { nullable: true })
+  posts?: PostUncheckedUpdateManyWithoutAuthorInput;
 }

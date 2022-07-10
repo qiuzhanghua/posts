@@ -7,15 +7,12 @@ import { UsersModule } from './users/users.module';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { join } from 'path';
-
 @Module({
   imports: [
     PrismaModule,
-    PostsModule,
-    UsersModule,
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
-      autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
+      autoSchemaFile: join(process.cwd(), 'generated/schema.graphql'),
       // autoSchemaFile: true,
       sortSchema: true,
       // typePaths: ["./**/*.graphql"],
@@ -23,6 +20,8 @@ import { join } from 'path';
       // debug: true,
       // playground: true,
     }),
+    PostsModule,
+    UsersModule,
   ],
   controllers: [AppController],
   providers: [AppService],

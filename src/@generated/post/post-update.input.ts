@@ -3,7 +3,7 @@ import { InputType } from '@nestjs/graphql';
 import { StringFieldUpdateOperationsInput } from '../prisma/string-field-update-operations.input';
 import { NullableStringFieldUpdateOperationsInput } from '../prisma/nullable-string-field-update-operations.input';
 import { NullableBoolFieldUpdateOperationsInput } from '../prisma/nullable-bool-field-update-operations.input';
-import { UserUpdateOneWithoutPostsNestedInput } from '../user/user-update-one-without-posts-nested.input';
+import { UserUpdateOneWithoutPostsInput } from '../user/user-update-one-without-posts.input';
 
 @InputType()
 export class PostUpdateInput {
@@ -19,6 +19,6 @@ export class PostUpdateInput {
   @Field(() => NullableBoolFieldUpdateOperationsInput, { nullable: true })
   published?: NullableBoolFieldUpdateOperationsInput;
 
-  @Field(() => UserUpdateOneWithoutPostsNestedInput, { nullable: true })
-  author?: UserUpdateOneWithoutPostsNestedInput;
+  @Field(() => UserUpdateOneWithoutPostsInput, { nullable: true })
+  author?: UserUpdateOneWithoutPostsInput;
 }

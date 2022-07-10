@@ -9,4 +9,8 @@ export class UsersService {
   create(dto: UserCreateInput) {
     return this.prisma.user.create({ data: dto });
   }
+
+  listAll() {
+    return this.prisma.user.findMany();
+  }
 }

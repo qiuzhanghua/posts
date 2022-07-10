@@ -41,3 +41,28 @@ DATABASE_PROVIDER="postgresql"
 #DATABASE_URL="file:./dev.db"
 #DATABASE_PROVIDER="sqlite"
 ```
+
+
+## graphql
+add Graphql Support
+```graphql
+# query {
+#   posts {
+#     id
+  
+#   }
+# }
+
+# mutation {
+#   addUser(userCreateInput: {name: "Daniel", email: "qiuzhanghua@icloud.com"}) {
+#     id
+#   }
+# }
+
+query {
+  users {
+    id
+    name
+  }
+}
+```
