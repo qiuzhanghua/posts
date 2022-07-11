@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import { User } from '@prisma/client';
 import { UserCreateInput } from 'src/@generated/user/user-create.input';
 import { PrismaService } from 'src/prisma/prisma.service';
 
@@ -12,5 +13,13 @@ export class UsersService {
 
   listAll() {
     return this.prisma.user.findMany();
+  }
+
+  async findOne(email: string): Promise<User> {
+    return await this.prisma.user.findUnique({
+      where: {
+        email,
+      },
+    });
   }
 }
