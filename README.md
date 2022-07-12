@@ -54,9 +54,9 @@ add Graphql Support
 # }
 
 # mutation {
-#   addUser(userCreateInput: {name: "Daniel", email: "qiuzhanghua@icloud.com"}) {
-#     id
-#   }
+#  addUser(userCreateInput: {name: "qiuzhanghua", email: "qiuzhanghua@gmail.com", password: "password"}) {
+#    id
+#  }
 # }
 
 query {
