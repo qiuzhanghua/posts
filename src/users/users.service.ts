@@ -16,10 +16,16 @@ export class UsersService {
   }
 
   async findOne(email: string): Promise<User | undefined> {
-    return await this.prisma.user.findFirst({
+    return await this.prisma.user.findUnique({
       where: {
         email,
       },
+    });
+  }
+
+  async findById(id: string) {
+    return await this.prisma.user.findUnique({
+      where: { id },
     });
   }
 }

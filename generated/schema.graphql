@@ -53,6 +53,7 @@ input PostWhereUniqueInput {
 type Query {
   posts: [Post!]!
   users: [User!]!
+  whoAmI: User!
 }
 
 type User {

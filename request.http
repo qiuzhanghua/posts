@@ -12,3 +12,14 @@ Content-Type: application/json
 ### Get Profile
 GET http://localhost:3000/auth/profile
 Authorization: Bearer {{auth_token}}
+
+### GraphQL whoami
+POST http://localhost:3000/graphql/
+Authorization: Bearer {{auth_token}}
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Accept: application/json
+
+{
+  "query":"query {whoAmI {id   name   email}}"
+}
