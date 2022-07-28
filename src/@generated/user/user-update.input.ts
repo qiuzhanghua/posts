@@ -6,18 +6,19 @@ import { PostUpdateManyWithoutAuthorNestedInput } from '../post/post-update-many
 
 @InputType()
 export class UserUpdateInput {
-  @Field(() => StringFieldUpdateOperationsInput, { nullable: true })
-  id?: StringFieldUpdateOperationsInput;
 
-  @Field(() => StringFieldUpdateOperationsInput, { nullable: true })
-  email?: StringFieldUpdateOperationsInput;
+    @Field(() => StringFieldUpdateOperationsInput, {nullable:true})
+    id?: StringFieldUpdateOperationsInput;
 
-  @Field(() => StringFieldUpdateOperationsInput, { nullable: true })
-  password?: StringFieldUpdateOperationsInput;
+    @Field(() => StringFieldUpdateOperationsInput, {nullable:true})
+    email?: StringFieldUpdateOperationsInput;
 
-  @Field(() => NullableStringFieldUpdateOperationsInput, { nullable: true })
-  name?: NullableStringFieldUpdateOperationsInput;
+    @Field(() => StringFieldUpdateOperationsInput, {nullable:true})
+    password?: StringFieldUpdateOperationsInput;
 
-  @Field(() => PostUpdateManyWithoutAuthorNestedInput, { nullable: true })
-  posts?: PostUpdateManyWithoutAuthorNestedInput;
+    @Field(() => NullableStringFieldUpdateOperationsInput, {nullable:true})
+    name?: NullableStringFieldUpdateOperationsInput;
+
+    @Field(() => PostUpdateManyWithoutAuthorNestedInput, {nullable:true})
+    posts?: PostUpdateManyWithoutAuthorNestedInput;
 }

@@ -7,30 +7,31 @@ import { UserRelationFilter } from '../user/user-relation-filter.input';
 
 @InputType()
 export class PostWhereInput {
-  @Field(() => [PostWhereInput], { nullable: true })
-  AND?: Array<PostWhereInput>;
 
-  @Field(() => [PostWhereInput], { nullable: true })
-  OR?: Array<PostWhereInput>;
+    @Field(() => [PostWhereInput], {nullable:true})
+    AND?: Array<PostWhereInput>;
 
-  @Field(() => [PostWhereInput], { nullable: true })
-  NOT?: Array<PostWhereInput>;
+    @Field(() => [PostWhereInput], {nullable:true})
+    OR?: Array<PostWhereInput>;
 
-  @Field(() => StringFilter, { nullable: true })
-  id?: StringFilter;
+    @Field(() => [PostWhereInput], {nullable:true})
+    NOT?: Array<PostWhereInput>;
 
-  @Field(() => StringFilter, { nullable: true })
-  title?: StringFilter;
+    @Field(() => StringFilter, {nullable:true})
+    id?: StringFilter;
 
-  @Field(() => StringNullableFilter, { nullable: true })
-  content?: StringNullableFilter;
+    @Field(() => StringFilter, {nullable:true})
+    title?: StringFilter;
 
-  @Field(() => BoolNullableFilter, { nullable: true })
-  published?: BoolNullableFilter;
+    @Field(() => StringNullableFilter, {nullable:true})
+    content?: StringNullableFilter;
 
-  @Field(() => UserRelationFilter, { nullable: true })
-  author?: UserRelationFilter;
+    @Field(() => BoolNullableFilter, {nullable:true})
+    published?: BoolNullableFilter;
 
-  @Field(() => StringNullableFilter, { nullable: true })
-  authorId?: StringNullableFilter;
+    @Field(() => UserRelationFilter, {nullable:true})
+    author?: UserRelationFilter;
+
+    @Field(() => StringNullableFilter, {nullable:true})
+    authorId?: StringNullableFilter;
 }

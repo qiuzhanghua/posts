@@ -9,29 +9,30 @@ import { UserUpdateWithoutPostsInput } from './user-update-without-posts.input';
 
 @InputType()
 export class UserUpdateOneWithoutPostsNestedInput {
-  @Field(() => UserCreateWithoutPostsInput, { nullable: true })
-  @Type(() => UserCreateWithoutPostsInput)
-  create?: UserCreateWithoutPostsInput;
 
-  @Field(() => UserCreateOrConnectWithoutPostsInput, { nullable: true })
-  @Type(() => UserCreateOrConnectWithoutPostsInput)
-  connectOrCreate?: UserCreateOrConnectWithoutPostsInput;
+    @Field(() => UserCreateWithoutPostsInput, {nullable:true})
+    @Type(() => UserCreateWithoutPostsInput)
+    create?: UserCreateWithoutPostsInput;
 
-  @Field(() => UserUpsertWithoutPostsInput, { nullable: true })
-  @Type(() => UserUpsertWithoutPostsInput)
-  upsert?: UserUpsertWithoutPostsInput;
+    @Field(() => UserCreateOrConnectWithoutPostsInput, {nullable:true})
+    @Type(() => UserCreateOrConnectWithoutPostsInput)
+    connectOrCreate?: UserCreateOrConnectWithoutPostsInput;
 
-  @Field(() => Boolean, { nullable: true })
-  disconnect?: boolean;
+    @Field(() => UserUpsertWithoutPostsInput, {nullable:true})
+    @Type(() => UserUpsertWithoutPostsInput)
+    upsert?: UserUpsertWithoutPostsInput;
 
-  @Field(() => Boolean, { nullable: true })
-  delete?: boolean;
+    @Field(() => Boolean, {nullable:true})
+    disconnect?: boolean;
 
-  @Field(() => UserWhereUniqueInput, { nullable: true })
-  @Type(() => UserWhereUniqueInput)
-  connect?: UserWhereUniqueInput;
+    @Field(() => Boolean, {nullable:true})
+    delete?: boolean;
 
-  @Field(() => UserUpdateWithoutPostsInput, { nullable: true })
-  @Type(() => UserUpdateWithoutPostsInput)
-  update?: UserUpdateWithoutPostsInput;
+    @Field(() => UserWhereUniqueInput, {nullable:true})
+    @Type(() => UserWhereUniqueInput)
+    connect?: UserWhereUniqueInput;
+
+    @Field(() => UserUpdateWithoutPostsInput, {nullable:true})
+    @Type(() => UserUpdateWithoutPostsInput)
+    update?: UserUpdateWithoutPostsInput;
 }

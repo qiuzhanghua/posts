@@ -7,27 +7,28 @@ import { PostMinOrderByAggregateInput } from './post-min-order-by-aggregate.inpu
 
 @InputType()
 export class PostOrderByWithAggregationInput {
-  @Field(() => SortOrder, { nullable: true })
-  id?: keyof typeof SortOrder;
 
-  @Field(() => SortOrder, { nullable: true })
-  title?: keyof typeof SortOrder;
+    @Field(() => SortOrder, {nullable:true})
+    id?: keyof typeof SortOrder;
 
-  @Field(() => SortOrder, { nullable: true })
-  content?: keyof typeof SortOrder;
+    @Field(() => SortOrder, {nullable:true})
+    title?: keyof typeof SortOrder;
 
-  @Field(() => SortOrder, { nullable: true })
-  published?: keyof typeof SortOrder;
+    @Field(() => SortOrder, {nullable:true})
+    content?: keyof typeof SortOrder;
 
-  @Field(() => SortOrder, { nullable: true })
-  authorId?: keyof typeof SortOrder;
+    @Field(() => SortOrder, {nullable:true})
+    published?: keyof typeof SortOrder;
 
-  @Field(() => PostCountOrderByAggregateInput, { nullable: true })
-  _count?: PostCountOrderByAggregateInput;
+    @Field(() => SortOrder, {nullable:true})
+    authorId?: keyof typeof SortOrder;
 
-  @Field(() => PostMaxOrderByAggregateInput, { nullable: true })
-  _max?: PostMaxOrderByAggregateInput;
+    @Field(() => PostCountOrderByAggregateInput, {nullable:true})
+    _count?: PostCountOrderByAggregateInput;
 
-  @Field(() => PostMinOrderByAggregateInput, { nullable: true })
-  _min?: PostMinOrderByAggregateInput;
+    @Field(() => PostMaxOrderByAggregateInput, {nullable:true})
+    _max?: PostMaxOrderByAggregateInput;
+
+    @Field(() => PostMinOrderByAggregateInput, {nullable:true})
+    _min?: PostMinOrderByAggregateInput;
 }

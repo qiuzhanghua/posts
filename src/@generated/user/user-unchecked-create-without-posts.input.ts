@@ -4,16 +4,17 @@ import * as Validator from 'class-validator';
 
 @InputType()
 export class UserUncheckedCreateWithoutPostsInput {
-  @Field(() => String, { nullable: true })
-  id?: string;
 
-  @Field(() => String, { nullable: false })
-  email!: string;
+    @Field(() => String, {nullable:true})
+    id?: string;
 
-  @Field(() => String, { nullable: false })
-  password!: string;
+    @Field(() => String, {nullable:false})
+    email!: string;
 
-  @Field(() => String, { nullable: true })
-  @Validator.MinLength(3)
-  name?: string;
+    @Field(() => String, {nullable:false})
+    password!: string;
+
+    @Field(() => String, {nullable:true})
+    @Validator.MinLength(3)
+    name?: string;
 }

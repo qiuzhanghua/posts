@@ -6,20 +6,19 @@ import { PostUncheckedUpdateManyWithoutAuthorNestedInput } from '../post/post-un
 
 @InputType()
 export class UserUncheckedUpdateInput {
-  @Field(() => StringFieldUpdateOperationsInput, { nullable: true })
-  id?: StringFieldUpdateOperationsInput;
 
-  @Field(() => StringFieldUpdateOperationsInput, { nullable: true })
-  email?: StringFieldUpdateOperationsInput;
+    @Field(() => StringFieldUpdateOperationsInput, {nullable:true})
+    id?: StringFieldUpdateOperationsInput;
 
-  @Field(() => StringFieldUpdateOperationsInput, { nullable: true })
-  password?: StringFieldUpdateOperationsInput;
+    @Field(() => StringFieldUpdateOperationsInput, {nullable:true})
+    email?: StringFieldUpdateOperationsInput;
 
-  @Field(() => NullableStringFieldUpdateOperationsInput, { nullable: true })
-  name?: NullableStringFieldUpdateOperationsInput;
+    @Field(() => StringFieldUpdateOperationsInput, {nullable:true})
+    password?: StringFieldUpdateOperationsInput;
 
-  @Field(() => PostUncheckedUpdateManyWithoutAuthorNestedInput, {
-    nullable: true,
-  })
-  posts?: PostUncheckedUpdateManyWithoutAuthorNestedInput;
+    @Field(() => NullableStringFieldUpdateOperationsInput, {nullable:true})
+    name?: NullableStringFieldUpdateOperationsInput;
+
+    @Field(() => PostUncheckedUpdateManyWithoutAuthorNestedInput, {nullable:true})
+    posts?: PostUncheckedUpdateManyWithoutAuthorNestedInput;
 }

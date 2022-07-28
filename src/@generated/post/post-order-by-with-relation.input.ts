@@ -5,21 +5,22 @@ import { UserOrderByWithRelationInput } from '../user/user-order-by-with-relatio
 
 @InputType()
 export class PostOrderByWithRelationInput {
-  @Field(() => SortOrder, { nullable: true })
-  id?: keyof typeof SortOrder;
 
-  @Field(() => SortOrder, { nullable: true })
-  title?: keyof typeof SortOrder;
+    @Field(() => SortOrder, {nullable:true})
+    id?: keyof typeof SortOrder;
 
-  @Field(() => SortOrder, { nullable: true })
-  content?: keyof typeof SortOrder;
+    @Field(() => SortOrder, {nullable:true})
+    title?: keyof typeof SortOrder;
 
-  @Field(() => SortOrder, { nullable: true })
-  published?: keyof typeof SortOrder;
+    @Field(() => SortOrder, {nullable:true})
+    content?: keyof typeof SortOrder;
 
-  @Field(() => UserOrderByWithRelationInput, { nullable: true })
-  author?: UserOrderByWithRelationInput;
+    @Field(() => SortOrder, {nullable:true})
+    published?: keyof typeof SortOrder;
 
-  @Field(() => SortOrder, { nullable: true })
-  authorId?: keyof typeof SortOrder;
+    @Field(() => UserOrderByWithRelationInput, {nullable:true})
+    author?: UserOrderByWithRelationInput;
+
+    @Field(() => SortOrder, {nullable:true})
+    authorId?: keyof typeof SortOrder;
 }

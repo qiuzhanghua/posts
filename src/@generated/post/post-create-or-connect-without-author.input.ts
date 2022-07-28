@@ -6,11 +6,12 @@ import { PostCreateWithoutAuthorInput } from './post-create-without-author.input
 
 @InputType()
 export class PostCreateOrConnectWithoutAuthorInput {
-  @Field(() => PostWhereUniqueInput, { nullable: false })
-  @Type(() => PostWhereUniqueInput)
-  where!: PostWhereUniqueInput;
 
-  @Field(() => PostCreateWithoutAuthorInput, { nullable: false })
-  @Type(() => PostCreateWithoutAuthorInput)
-  create!: PostCreateWithoutAuthorInput;
+    @Field(() => PostWhereUniqueInput, {nullable:false})
+    @Type(() => PostWhereUniqueInput)
+    where!: PostWhereUniqueInput;
+
+    @Field(() => PostCreateWithoutAuthorInput, {nullable:false})
+    @Type(() => PostCreateWithoutAuthorInput)
+    create!: PostCreateWithoutAuthorInput;
 }

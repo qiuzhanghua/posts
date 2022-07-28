@@ -6,27 +6,28 @@ import { PostMaxAggregate } from './post-max-aggregate.output';
 
 @ObjectType()
 export class PostGroupBy {
-  @Field(() => String, { nullable: false })
-  id!: string;
 
-  @Field(() => String, { nullable: false })
-  title!: string;
+    @Field(() => String, {nullable:false})
+    id!: string;
 
-  @Field(() => String, { nullable: true })
-  content?: string;
+    @Field(() => String, {nullable:false})
+    title!: string;
 
-  @Field(() => Boolean, { nullable: true })
-  published?: boolean;
+    @Field(() => String, {nullable:true})
+    content?: string;
 
-  @Field(() => String, { nullable: true })
-  authorId?: string;
+    @Field(() => Boolean, {nullable:true})
+    published?: boolean;
 
-  @Field(() => PostCountAggregate, { nullable: true })
-  _count?: PostCountAggregate;
+    @Field(() => String, {nullable:true})
+    authorId?: string;
 
-  @Field(() => PostMinAggregate, { nullable: true })
-  _min?: PostMinAggregate;
+    @Field(() => PostCountAggregate, {nullable:true})
+    _count?: PostCountAggregate;
 
-  @Field(() => PostMaxAggregate, { nullable: true })
-  _max?: PostMaxAggregate;
+    @Field(() => PostMinAggregate, {nullable:true})
+    _min?: PostMinAggregate;
+
+    @Field(() => PostMaxAggregate, {nullable:true})
+    _max?: PostMaxAggregate;
 }

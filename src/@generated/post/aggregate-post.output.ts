@@ -6,12 +6,13 @@ import { PostMaxAggregate } from './post-max-aggregate.output';
 
 @ObjectType()
 export class AggregatePost {
-  @Field(() => PostCountAggregate, { nullable: true })
-  _count?: PostCountAggregate;
 
-  @Field(() => PostMinAggregate, { nullable: true })
-  _min?: PostMinAggregate;
+    @Field(() => PostCountAggregate, {nullable:true})
+    _count?: PostCountAggregate;
 
-  @Field(() => PostMaxAggregate, { nullable: true })
-  _max?: PostMaxAggregate;
+    @Field(() => PostMinAggregate, {nullable:true})
+    _min?: PostMinAggregate;
+
+    @Field(() => PostMaxAggregate, {nullable:true})
+    _max?: PostMaxAggregate;
 }

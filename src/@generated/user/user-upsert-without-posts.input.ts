@@ -6,11 +6,12 @@ import { UserCreateWithoutPostsInput } from './user-create-without-posts.input';
 
 @InputType()
 export class UserUpsertWithoutPostsInput {
-  @Field(() => UserUpdateWithoutPostsInput, { nullable: false })
-  @Type(() => UserUpdateWithoutPostsInput)
-  update!: UserUpdateWithoutPostsInput;
 
-  @Field(() => UserCreateWithoutPostsInput, { nullable: false })
-  @Type(() => UserCreateWithoutPostsInput)
-  create!: UserCreateWithoutPostsInput;
+    @Field(() => UserUpdateWithoutPostsInput, {nullable:false})
+    @Type(() => UserUpdateWithoutPostsInput)
+    update!: UserUpdateWithoutPostsInput;
+
+    @Field(() => UserCreateWithoutPostsInput, {nullable:false})
+    @Type(() => UserCreateWithoutPostsInput)
+    create!: UserCreateWithoutPostsInput;
 }

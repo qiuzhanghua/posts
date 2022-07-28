@@ -6,27 +6,28 @@ import { BoolNullableWithAggregatesFilter } from '../prisma/bool-nullable-with-a
 
 @InputType()
 export class PostScalarWhereWithAggregatesInput {
-  @Field(() => [PostScalarWhereWithAggregatesInput], { nullable: true })
-  AND?: Array<PostScalarWhereWithAggregatesInput>;
 
-  @Field(() => [PostScalarWhereWithAggregatesInput], { nullable: true })
-  OR?: Array<PostScalarWhereWithAggregatesInput>;
+    @Field(() => [PostScalarWhereWithAggregatesInput], {nullable:true})
+    AND?: Array<PostScalarWhereWithAggregatesInput>;
 
-  @Field(() => [PostScalarWhereWithAggregatesInput], { nullable: true })
-  NOT?: Array<PostScalarWhereWithAggregatesInput>;
+    @Field(() => [PostScalarWhereWithAggregatesInput], {nullable:true})
+    OR?: Array<PostScalarWhereWithAggregatesInput>;
 
-  @Field(() => StringWithAggregatesFilter, { nullable: true })
-  id?: StringWithAggregatesFilter;
+    @Field(() => [PostScalarWhereWithAggregatesInput], {nullable:true})
+    NOT?: Array<PostScalarWhereWithAggregatesInput>;
 
-  @Field(() => StringWithAggregatesFilter, { nullable: true })
-  title?: StringWithAggregatesFilter;
+    @Field(() => StringWithAggregatesFilter, {nullable:true})
+    id?: StringWithAggregatesFilter;
 
-  @Field(() => StringNullableWithAggregatesFilter, { nullable: true })
-  content?: StringNullableWithAggregatesFilter;
+    @Field(() => StringWithAggregatesFilter, {nullable:true})
+    title?: StringWithAggregatesFilter;
 
-  @Field(() => BoolNullableWithAggregatesFilter, { nullable: true })
-  published?: BoolNullableWithAggregatesFilter;
+    @Field(() => StringNullableWithAggregatesFilter, {nullable:true})
+    content?: StringNullableWithAggregatesFilter;
 
-  @Field(() => StringNullableWithAggregatesFilter, { nullable: true })
-  authorId?: StringNullableWithAggregatesFilter;
+    @Field(() => BoolNullableWithAggregatesFilter, {nullable:true})
+    published?: BoolNullableWithAggregatesFilter;
+
+    @Field(() => StringNullableWithAggregatesFilter, {nullable:true})
+    authorId?: StringNullableWithAggregatesFilter;
 }

@@ -5,21 +5,22 @@ import { User } from '../user/user.model';
 
 @ObjectType()
 export class Post {
-  @Field(() => ID, { nullable: false })
-  id!: string;
 
-  @Field(() => String, { nullable: false })
-  title!: string;
+    @Field(() => ID, {nullable:false})
+    id!: string;
 
-  @Field(() => String, { nullable: true })
-  content!: string | null;
+    @Field(() => String, {nullable:false})
+    title!: string;
 
-  @Field(() => Boolean, { nullable: true, defaultValue: false })
-  published!: boolean | null;
+    @Field(() => String, {nullable:true})
+    content!: string | null;
 
-  @Field(() => User, { nullable: true })
-  author?: User | null;
+    @Field(() => Boolean, {nullable:true,defaultValue:false})
+    published!: boolean | null;
 
-  @Field(() => String, { nullable: true })
-  authorId!: string | null;
+    @Field(() => User, {nullable:true})
+    author?: User | null;
+
+    @Field(() => String, {nullable:true})
+    authorId!: string | null;
 }

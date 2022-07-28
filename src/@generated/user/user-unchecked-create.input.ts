@@ -5,21 +5,20 @@ import { PostUncheckedCreateNestedManyWithoutAuthorInput } from '../post/post-un
 
 @InputType()
 export class UserUncheckedCreateInput {
-  @Field(() => String, { nullable: true })
-  id?: string;
 
-  @Field(() => String, { nullable: false })
-  email!: string;
+    @Field(() => String, {nullable:true})
+    id?: string;
 
-  @Field(() => String, { nullable: false })
-  password!: string;
+    @Field(() => String, {nullable:false})
+    email!: string;
 
-  @Field(() => String, { nullable: true })
-  @Validator.MinLength(3)
-  name?: string;
+    @Field(() => String, {nullable:false})
+    password!: string;
 
-  @Field(() => PostUncheckedCreateNestedManyWithoutAuthorInput, {
-    nullable: true,
-  })
-  posts?: PostUncheckedCreateNestedManyWithoutAuthorInput;
+    @Field(() => String, {nullable:true})
+    @Validator.MinLength(3)
+    name?: string;
+
+    @Field(() => PostUncheckedCreateNestedManyWithoutAuthorInput, {nullable:true})
+    posts?: PostUncheckedCreateNestedManyWithoutAuthorInput;
 }

@@ -7,18 +7,19 @@ import { UserUpdateOneWithoutPostsNestedInput } from '../user/user-update-one-wi
 
 @InputType()
 export class PostUpdateInput {
-  @Field(() => StringFieldUpdateOperationsInput, { nullable: true })
-  id?: StringFieldUpdateOperationsInput;
 
-  @Field(() => StringFieldUpdateOperationsInput, { nullable: true })
-  title?: StringFieldUpdateOperationsInput;
+    @Field(() => StringFieldUpdateOperationsInput, {nullable:true})
+    id?: StringFieldUpdateOperationsInput;
 
-  @Field(() => NullableStringFieldUpdateOperationsInput, { nullable: true })
-  content?: NullableStringFieldUpdateOperationsInput;
+    @Field(() => StringFieldUpdateOperationsInput, {nullable:true})
+    title?: StringFieldUpdateOperationsInput;
 
-  @Field(() => NullableBoolFieldUpdateOperationsInput, { nullable: true })
-  published?: NullableBoolFieldUpdateOperationsInput;
+    @Field(() => NullableStringFieldUpdateOperationsInput, {nullable:true})
+    content?: NullableStringFieldUpdateOperationsInput;
 
-  @Field(() => UserUpdateOneWithoutPostsNestedInput, { nullable: true })
-  author?: UserUpdateOneWithoutPostsNestedInput;
+    @Field(() => NullableBoolFieldUpdateOperationsInput, {nullable:true})
+    published?: NullableBoolFieldUpdateOperationsInput;
+
+    @Field(() => UserUpdateOneWithoutPostsNestedInput, {nullable:true})
+    author?: UserUpdateOneWithoutPostsNestedInput;
 }

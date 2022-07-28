@@ -7,15 +7,16 @@ import { PostUpdateInput } from './post-update.input';
 
 @ArgsType()
 export class UpsertOnePostArgs {
-  @Field(() => PostWhereUniqueInput, { nullable: false })
-  @Type(() => PostWhereUniqueInput)
-  where!: PostWhereUniqueInput;
 
-  @Field(() => PostCreateInput, { nullable: false })
-  @Type(() => PostCreateInput)
-  create!: PostCreateInput;
+    @Field(() => PostWhereUniqueInput, {nullable:false})
+    @Type(() => PostWhereUniqueInput)
+    where!: PostWhereUniqueInput;
 
-  @Field(() => PostUpdateInput, { nullable: false })
-  @Type(() => PostUpdateInput)
-  update!: PostUpdateInput;
+    @Field(() => PostCreateInput, {nullable:false})
+    @Type(() => PostCreateInput)
+    create!: PostCreateInput;
+
+    @Field(() => PostUpdateInput, {nullable:false})
+    @Type(() => PostUpdateInput)
+    update!: PostUpdateInput;
 }
